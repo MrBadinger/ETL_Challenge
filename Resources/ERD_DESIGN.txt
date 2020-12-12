@@ -1,8 +1,7 @@
 
 THOR_WWII_AIRCRAFT
 ----------------------
-gloss_id PK int
-aircraft varchar(50)
+aircraft PK varchar(50)
 name varchar(100)
 full_name varchar(100)
 aircraft_type varchar(100)
