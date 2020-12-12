@@ -1,18 +1,14 @@
 ﻿--Create in thor database
 
 CREATE TABLE "THOR_WWII_AIRCRAFT" (
-    "id" int   NOT NULL,
     "aircraft" varchar(50)   NOT NULL,
     "name" varchar(100)   NOT NULL,
     "full_name" varchar(100)   NOT NULL,
     "aircraft_type" varchar(100)   NOT NULL,
     "hyperlink" varchar(100)   NOT NULL,
     CONSTRAINT "pk_THOR_WWII_AIRCRAFT" PRIMARY KEY (
-        "id"
-     ),
-    CONSTRAINT "uc_THOR_WWII_AIRCRAFT_aircraft" UNIQUE (
         "aircraft"
-    )
+     )
 );
 
 CREATE TABLE "THOR_WWII_MASTER" (
