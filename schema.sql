@@ -12,7 +12,7 @@ CREATE TABLE thor_wwii_aircraft (
 );
 
 CREATE TABLE thor_wwii_master (
-    "id" int   NOT NULL,
+    "id" SERIAL,
     "msndate" date   NOT NULL,
     "theater" varchar(10)   NOT NULL,
     "naf" varchar(10)   NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE thor_wwii_master (
 );
 
 CREATE TABLE thor_wwii_weather (
-    "id" int   NOT NULL,
+    "id" SERIAL,
     "STA" int   NOT NULL,
     "Date" date   NOT NULL,
     "prcp" float   NOT NULL,
