@@ -1,6 +1,6 @@
 ﻿--Create in thor database
 
-CREATE TABLE "THOR_WWII_AIRCRAFT" (
+CREATE TABLE thor_wwii_aircraft (
     "aircraft" varchar(50)   NOT NULL,
     "name" varchar(100)   NOT NULL,
     "full_name" varchar(100)   NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE "THOR_WWII_AIRCRAFT" (
      )
 );
 
-CREATE TABLE "THOR_WWII_MASTER" (
+CREATE TABLE thor_wwii_master (
     "id" int   NOT NULL,
     "msndate" date   NOT NULL,
     "theater" varchar(10)   NOT NULL,
@@ -67,7 +67,7 @@ CREATE TABLE "THOR_WWII_MASTER" (
      )
 );
 
-CREATE TABLE "THOR_WWII_WEATHER" (
+CREATE TABLE thor_wwii_weather (
     "id" int   NOT NULL,
     "STA" int   NOT NULL,
     "Date" date   NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE "THOR_WWII_WEATHER" (
      )
 );
 
-CREATE TABLE "THOR_WWII_STATION_LOCATION" (
+CREATE TABLE thor_wwii_station_location (
     "wban" int   NOT NULL,
     "name" varchar(100)   NOT NULL,
     "state_country" varchar(2)   NOT NULL,
@@ -95,9 +95,9 @@ CREATE TABLE "THOR_WWII_STATION_LOCATION" (
      )
 );
 
-ALTER TABLE "THOR_WWII_MASTER" ADD CONSTRAINT "fk_THOR_WWII_MASTER_mds" FOREIGN KEY("mds")
-REFERENCES "THOR_WWII_AIRCRAFT" ("aircraft");
+ALTER TABLE thor_wwii_master ADD CONSTRAINT "fk_THOR_WWII_MASTER_mds" FOREIGN KEY("mds")
+REFERENCES thor_wwii_aircraft ("aircraft");
 
-ALTER TABLE "THOR_WWII_WEATHER" ADD CONSTRAINT "fk_THOR_WWII_WEATHER_STA" FOREIGN KEY("STA")
-REFERENCES "THOR_WWII_STATION_LOCATION" ("wban");
+ALTER TABLE thor_wwii_weather ADD CONSTRAINT "fk_THOR_WWII_WEATHER_STA" FOREIGN KEY("STA")
+REFERENCES thor_wwii_station_location ("wban");
 
