@@ -71,13 +71,13 @@ CREATE TABLE thor_wwii_weather (
     "id" SERIAL,
     "sta" int   NULL,
     "date" date   NULL,
-    "prcp" float   NULL,
-    "dr" int  NULL,
-    "spd" int   NULL,
-    "max" int   NULL,
-    "min" int   NULL,
-    "mea" int  NULL,
-    "snf" int   NULL,
+    "prcp" varchar(20)  NULL,
+    "dr" float   NULL,
+    "spd" float   NULL,
+    "max" float    NULL,
+    "min" float    NULL,
+    "mea" float   NULL,
+    "snf" varchar(20)   NULL,
     CONSTRAINT "pk_THOR_WWII_WEATHER" PRIMARY KEY (
         "id"
      )
