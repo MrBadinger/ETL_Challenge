@@ -1,0 +1,84 @@
+
+THOR_WWII_AIRCRAFT
+----------------------
+aircraft PK varchar(50)
+name varchar(100)
+full_name varchar(100)
+aircraft_type varchar(100)
+hyperlink varchar(100)
+
+THOR_WWII_MASTER
+----------------------
+id PK int
+msndate date
+theater varchar(10)
+naf varchar(10)
+country_flying_mission varchar(25)
+source_latitude varchar(50)
+source_longitude varchar(50)
+latitude float
+longitude float
+mds varchar(50) FK >- THOR_WWII_AIRCRAFT.aircraft
+tgt_id int
+tgt_industry_code int
+tgt_location varchar(100)
+tgt_type varchar(100)
+tgt_industry varchar(100)
+tgt_country varchar(50)
+tgt_priority varchar(4)
+ac_attacking int
+altitude float
+number_of_he float
+type_of_he varchar(100)
+lbs_he int
+tons_of_he float
+number_of_ic int
+type_of_ic varchar(50)
+lbs_ic float
+tons_of_ic float
+number_of_frag float
+type_of_frag varchar(50)
+lbs_frag float
+tons_of_frag float
+total_lbs float
+total_tons float
+takeoff_base varchar(50)
+takeoff_country varchar(50)
+takeoff_latitude float
+takeoff_longitude float
+ac_lost int
+ac_damaged int
+ac_airborne float
+ac_dropping int
+time_over_target varchar(10)
+bda string
+callsign varchar(20)
+spares_return_ac int
+wx_fail_ac int
+mech_fail_ac int
+misc_fail_ac int
+target_comment text
+mission_comments text
+
+
+THOR_WWII_WEATHER
+----------------------
+id PK int
+STA int FK >- THOR_WWII_STATION_LOCATION.wban
+Date date
+prcp float
+dr int
+spd int
+max int
+min int
+mea int
+snf int
+
+THOR_WWII_STATION_LOCATION
+----------------------
+wban PK int
+name varchar(100)
+state_country varchar(2)
+elev int
+latitude float
+longitude float
