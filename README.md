@@ -64,3 +64,21 @@
 	<li>full_name = Aircraft extended name</li>
 	<li>aircraft_type = bomber, fighter, etc</li>
 	<li>hyperlink = link to aircraft website details</li> 
+
+<h3> thor_wwii_weather table column descriptions</h3>
+	<li>STA = station ID</li>
+	<li>Date = Date MM/DD/YYYY</li>
+	<li>PRCP = Measured precip in inches</li>
+	<li>SPD = wind speed in knots</li>
+	<li>MAX = Max observed temp F</li>
+	<li>MIN = Min observed temp F</li>
+	<li>MEA = Mean observed temp F</li>
+	<li>SNF = Snowfall in inches</li>
+
+<h3>thor_wwii_station_location column descriptions</h3>
+	<li>WBAN = station ID</li>
+	<li>NAME = station Name</li>
+	<li>STATE/COUNTRY ID = Country ID</li>
+	<li>ELEV = Elevation in [units]</li>
+	<li>Latitude = Latitude in numeric format</li>
+	<li>Longitude = Longitude in numeric format</li>
