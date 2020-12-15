@@ -14,19 +14,19 @@ CREATE TABLE thor_wwii_aircraft (
 CREATE TABLE thor_wwii_master (
     "id" SERIAL,
     "msndate" date   NOT NULL,
-    "theater" varchar(10)   NULL,
+    "theater" varchar(25)   NULL,
     "naf" varchar(10)   NULL,
     "country_flying_mission" varchar(25)   NULL,
     "source_latitude" varchar(50)   NULL,
     "source_longitude" varchar(50)   NULL,
     "latitude" float   NULL,
     "longitude" float   NULL,
-    "mds" varchar(50)   NULL,
+    "aircraft" varchar(50)   NULL,
     "tgt_id" int   NULL,
     "tgt_industry_code" int   NULL,
-    "tgt_location" varchar(100)   NULL,
+    "tgt_location" text   NULL,
     "tgt_type" varchar(100)   NULL,
-    "tgt_industry" varchar(100)   NULL,
+    "tgt_industry" text   NULL,
     "tgt_country" varchar(50)   NULL,
     "tgt_priority" varchar(4)   NULL,
     "ac_attacking" int   NULL,
@@ -54,7 +54,7 @@ CREATE TABLE thor_wwii_master (
     "ac_airborne" float  NULL,
     "ac_dropping" int   NULL,
     "time_over_target" varchar(10)   NULL,
-    "bda" text   NOT NULL,
+    "bda" text   NULL,
     "callsign" varchar(20)   NULL,
     "spares_return_ac" int   NULL,
     "wx_fail_ac" int   NULL,
@@ -95,7 +95,7 @@ CREATE TABLE thor_wwii_station_location (
      )
 );
 
-ALTER TABLE thor_wwii_master ADD CONSTRAINT "fk_THOR_WWII_MASTER_mds" FOREIGN KEY("mds")
+ALTER TABLE thor_wwii_master ADD CONSTRAINT "fk_THOR_WWII_MASTER_mds" FOREIGN KEY("aircraft")
 REFERENCES thor_wwii_aircraft ("aircraft");
 
 ALTER TABLE thor_wwii_weather ADD CONSTRAINT "fk_THOR_WWII_WEATHER_STA" FOREIGN KEY("sta")
