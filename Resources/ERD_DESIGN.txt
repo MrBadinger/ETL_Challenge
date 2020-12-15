@@ -9,21 +9,21 @@ hyperlink varchar(100)
 
 THOR_WWII_MASTER
 ----------------------
-id PK int
+id PK SERIAL
 msndate date
-theater varchar(10)
+theater varchar(25)
 naf varchar(10)
 country_flying_mission varchar(25)
 source_latitude varchar(50)
 source_longitude varchar(50)
 latitude float
 longitude float
-mds varchar(50) FK >- THOR_WWII_AIRCRAFT.aircraft
+aircraft varchar(50) FK >- THOR_WWII_AIRCRAFT.aircraft
 tgt_id int
 tgt_industry_code int
-tgt_location varchar(100)
+tgt_location text
 tgt_type varchar(100)
-tgt_industry varchar(100)
+tgt_industry text
 tgt_country varchar(50)
 tgt_priority varchar(4)
 ac_attacking int
@@ -63,7 +63,7 @@ mission_comments text
 
 THOR_WWII_WEATHER
 ----------------------
-id PK int
+id PK SERIAL
 STA int FK >- THOR_WWII_STATION_LOCATION.wban
 Date date
 prcp float
