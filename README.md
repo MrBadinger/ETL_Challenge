@@ -10,6 +10,8 @@
 	<li>Deployment of aircraft type and weapon type used</li>
 	<li>Type of targets selected</li>
 	<li>Number of aircraft deployed</li>
+	<p></p>
+	<p></p>
 
 <p>Data Sources:</p>
 	<li>World War II THOR Data.  Link:  https://data.world/datamil/world-war-ii-thor-data</li>
@@ -56,7 +58,7 @@
 	<li>takeoff_longitude =  Longitude of airfield</li>
 	<li>ac_lost =  Count of aircraft lost</li>
 
-<h3> thor_wwii_aircraft Table Data Desription</h>
+<h3> thor_wwii_aircraft Table Data Desription</h3>
 	<li>aircraft =  Aircraft mission design series (used to link to thor_wwii_master)</li>
 	<li>name = Aircraft short name</li>
 	<li>full_name = Aircraft extended name</li>
